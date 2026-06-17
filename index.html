@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Alejandro Provencio — Redes & Desarrollo</title>
+<meta name="description" content="Portfolio de Alejandro Provencio. Técnico de redes y sistemas, desarrollador de videojuegos.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..900&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
+</head>
+<body data-lang="es">
+
+<header class="site-header">
+  <div class="nav-wrap">
+    <a class="brand" href="#top" aria-label="Inicio">
+      <span class="brand-mark">AP</span>
+    </a>
+
+    <nav class="main-nav" id="main-nav">
+      <a href="#about" data-i18n="nav.about">Sobre mí</a>
+      <a href="#skills" data-i18n="nav.skills">Habilidades</a>
+      <a href="#journey" data-i18n="nav.journey">Trayectoria</a>
+      <a href="#projects" data-i18n="nav.projects">Proyectos</a>
+      <a href="#contact" data-i18n="nav.contact">Contacto</a>
+    </nav>
+
+    <div class="header-actions">
+      <button id="lang-toggle" class="lang-toggle" aria-label="Cambiar idioma / Switch language">
+        <span class="lang-opt" data-lang-opt="es">ES</span>
+        <span class="lang-sep">/</span>
+        <span class="lang-opt" data-lang-opt="en">EN</span>
+      </button>
+      <button class="nav-burger" id="nav-burger" aria-label="Abrir menú" aria-expanded="false">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+</header>
+
+<main id="top">
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-grid">
+      <div class="hero-copy">
+        <p class="eyebrow mono" data-i18n="hero.eyebrow">// técnico de redes · desarrollador de videojuegos</p>
+        <h1 class="display hero-name">Alejandro<br>Provencio</h1>
+        <p class="hero-tagline" data-i18n="hero.tagline">Siempre aprendiendo, con esfuerzo y compañerismo. Entre routers, redes de fibra y motores de videojuego.</p>
+        <div class="hero-actions">
+          <a href="#projects" class="btn btn-primary" data-i18n="hero.cta_projects">Ver proyectos</a>
+          <a href="#contact" class="btn btn-ghost" data-i18n="hero.cta_contact">Hablemos</a>
+        </div>
+      </div>
+
+      <div class="status-panel">
+        <div class="status-row">
+          <span class="status-dot" aria-hidden="true"></span>
+          <span class="mono status-label" data-i18n="hero.status">disponible para nuevas oportunidades</span>
+        </div>
+
+        <div class="signal" aria-hidden="true">
+          <span class="bar b1"></span>
+          <span class="bar b2"></span>
+          <span class="bar b3"></span>
+          <span class="bar b4"></span>
+        </div>
+
+        <dl class="status-meta">
+          <div>
+            <dt data-i18n="hero.meta_location_label">ubicación</dt>
+            <dd data-i18n="hero.meta_location_value">Granada, España</dd>
+          </div>
+          <div>
+            <dt data-i18n="hero.meta_uptime_label">en activo desde</dt>
+            <dd>2021</dd>
+          </div>
+          <div>
+            <dt data-i18n="hero.meta_lang_label">idiomas</dt>
+            <dd data-i18n="hero.meta_lang_value">Español (nativo) · Inglés (C1)</dd>
+          </div>
+        </dl>
+      </div>
+    </div>
+  </section>
+
+  <!-- ABOUT -->
+  <section id="about" class="section about">
+    <p class="eyebrow mono" data-i18n="about.eyebrow">// sobre mí</p>
+    <h2 class="section-title" data-i18n="about.title">De redes a mundos virtuales</h2>
+    <p class="section-lead" data-i18n="about.body">
+      Técnico de sistemas y redes con formación adicional en desarrollo de videojuegos 3D. Me muevo
+      con la misma soltura supervisando una red nacional de fibra que programando un proyecto en
+      Unity o Unreal Engine. Honestidad, compañerismo y ganas de seguir aprendiendo, siempre.
+    </p>
+  </section>
+
+  <!-- SKILLS -->
+  <section id="skills" class="section skills">
+    <p class="eyebrow mono" data-i18n="skills.eyebrow">// habilidades</p>
+    <h2 class="section-title" data-i18n="skills.title">Lo que sé manejar</h2>
+
+    <div class="skills-grid">
+      <div class="skill-group">
+        <h3 data-i18n="skills.g1.title">Redes & sistemas</h3>
+        <ul class="chip-list">
+          <li>Windows Server</li>
+          <li>Linux</li>
+          <li>Cisco</li>
+          <li>Linux Bash</li>
+          <li>Windows Shell</li>
+          <li>Nokia & Huawei</li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <h3 data-i18n="skills.g2.title">Programación & web</h3>
+        <ul class="chip-list">
+          <li>HTML / CSS / JS</li>
+          <li>PHP</li>
+          <li>XML</li>
+          <li>SQL Server</li>
+          <li>C#</li>
+          <li>Android</li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <h3 data-i18n="skills.g3.title">Desarrollo de videojuegos</h3>
+        <ul class="chip-list">
+          <li>Unity</li>
+          <li>Unreal Engine 5</li>
+          <li data-i18n="skills.g3.item1">Generalista 3D</li>
+          <li data-i18n="skills.g3.item2">Edición de vídeo y audio</li>
+        </ul>
+      </div>
+
+      <div class="skill-group">
+        <h3 data-i18n="skills.g4.title">Ciberseguridad</h3>
+        <ul class="chip-list">
+          <li>Cisco Cybersecurity Essentials</li>
+          <li>CompTIA Pentest+</li>
+          <li data-i18n="skills.g4.item1">Red Team (nivel básico)</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+
+  <!-- JOURNEY: education + experience -->
+  <section id="journey" class="section journey">
+    <p class="eyebrow mono" data-i18n="journey.eyebrow">// trayectoria</p>
+    <h2 class="section-title" data-i18n="journey.title">Formación y experiencia</h2>
+
+    <div class="journey-columns">
+      <div class="journey-col">
+        <h3 class="journey-col-title" data-i18n="journey.education_title">Formación académica</h3>
+        <ol class="timeline">
+          <li class="timeline-item">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <p class="timeline-date mono">2022 — 2024</p>
+            <h4 data-i18n="journey.edu1.title">3D, Juegos y Entornos Interactivos</h4>
+            <p class="timeline-sub" data-i18n="journey.edu1.sub">Grado Superior (FP II)</p>
+            <p data-i18n="journey.edu1.desc">Generalista 3D. Desarrollo de videojuegos en Unity y Unreal Engine. Montaje y edición de vídeo.</p>
+          </li>
+          <li class="timeline-item">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <p class="timeline-date mono">2016 — 2020</p>
+            <h4 data-i18n="journey.edu2.title">Administración de Sistemas Informáticos en Red</h4>
+            <p class="timeline-sub" data-i18n="journey.edu2.sub">Grado Superior (FP II)</p>
+            <p data-i18n="journey.edu2.desc">Gestión de servidores Windows y Linux. Redes Cisco. Programación web y SQL.</p>
+          </li>
+          <li class="timeline-item">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <p class="timeline-date mono">2023</p>
+            <h4 data-i18n="journey.edu3.title">Desarrollo de Videojuegos con Unreal Engine 5</h4>
+            <p class="timeline-sub" data-i18n="journey.edu3.sub">Curso · Impartido por la EOI</p>
+            <p data-i18n="journey.edu3.desc">Formación generalista en Unreal Engine 5 y desarrollo individual de proyectos.</p>
+          </li>
+        </ol>
+      </div>
+
+      <div class="journey-col">
+        <h3 class="journey-col-title" data-i18n="journey.experience_title">Experiencia laboral</h3>
+        <ol class="timeline">
+          <li class="timeline-item">
+            <span class="timeline-dot timeline-dot-active" aria-hidden="true"></span>
+            <p class="timeline-date mono"><span data-i18n="journey.present_start">2025</span> — <span data-i18n="journey.present">actualidad</span></p>
+            <h4 data-i18n="journey.job1.title">Técnico de Supervisión de Redes N1</h4>
+            <p class="timeline-sub">Vodafone · Inneria Solutions</p>
+            <p data-i18n="journey.job1.desc">Supervisión de la red nacional de fibra y coaxial, resolución de incidencias, gestión de alarmas en equipos Nokia y Huawei, coordinación con técnicos de campo.</p>
+          </li>
+          <li class="timeline-item">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <p class="timeline-date mono">2023 — 2024</p>
+            <h4 data-i18n="journey.job2.title">Prácticas en Unity</h4>
+            <p class="timeline-sub" data-i18n="journey.job2.org">Fundación MEDAC</p>
+            <p data-i18n="journey.job2.desc">Programación de una sala virtual de conferencias en C#, disposición de assets y configuración de sonido del proyecto.</p>
+          </li>
+          <li class="timeline-item">
+            <span class="timeline-dot" aria-hidden="true"></span>
+            <p class="timeline-date mono">2021 — 2022</p>
+            <h4 data-i18n="journey.job3.title">Técnico y Soporte Informático</h4>
+            <p class="timeline-sub">TM Digital</p>
+            <p data-i18n="journey.job3.desc">Configuración de redes y telecomunicaciones, atención al cliente, instalación de redes locales y optimización de sistemas.</p>
+          </li>
+        </ol>
+      </div>
+    </div>
+
+    <div class="certifications">
+      <h3 class="certs-title" data-i18n="journey.certs_title">Otras certificaciones</h3>
+      <ul class="chip-list">
+        <li data-i18n="journey.cert1">Desarrollo de aplicaciones web multiplataforma (AulaMentor)</li>
+        <li>Cisco Cybersecurity Essentials</li>
+        <li data-i18n="journey.cert2">CompTIA Pentest+ (preparación)</li>
+        <li data-i18n="journey.cert3">Curso de Ciberseguridad (OpenWebinars)</li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- PROJECTS -->
+  <section id="projects" class="section projects">
+    <p class="eyebrow mono" data-i18n="projects.eyebrow">// proyectos</p>
+    <h2 class="section-title" data-i18n="projects.title">Cosas que estoy construyendo</h2>
+    <p class="section-lead" data-i18n="projects.lead">Mi vuelta a la programación por gusto, fuera del trabajo. Esta sección crecerá con el tiempo.</p>
+
+    <div class="projects-grid">
+
+      <article class="project-card">
+        <div class="project-icon" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <circle cx="32" cy="32" r="26" fill="var(--beige-card)" stroke="var(--ink)" stroke-width="2"/>
+            <circle cx="32" cy="32" r="13" fill="var(--burgundy-deep)"/>
+            <circle cx="32" cy="32" r="9" fill="var(--beige-bg)"/>
+            <text x="32" y="37" text-anchor="middle" font-family="JetBrains Mono, monospace" font-size="12" fill="var(--ink)">8</text>
+          </svg>
+        </div>
+        <span class="project-status status-progress" data-i18n="projects.status_progress">en desarrollo</span>
+        <h3 data-i18n="projects.p1.title">Billar online</h3>
+        <p data-i18n="projects.p1.desc">Un juego de billar para echar partidas en el tiempo libre, con salas multijugador y una tabla de puntuaciones para llevar la cuenta de quién manda.</p>
+        <ul class="tech-tags">
+          <li>C#</li>
+          <li data-i18n="projects.p1.tag1">Física 2D</li>
+          <li data-i18n="projects.p1.tag2">Marcador online</li>
+        </ul>
+      </article>
+
+      <article class="project-card">
+        <div class="project-icon" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="4" width="56" height="56" rx="12" fill="var(--beige-card)" stroke="var(--ink)" stroke-width="2"/>
+            <rect x="14" y="34" width="4" height="16" fill="var(--burgundy-deep)"/>
+            <rect x="22" y="24" width="4" height="26" fill="var(--brass)"/>
+            <rect x="30" y="14" width="4" height="36" fill="var(--burgundy-deep)"/>
+            <rect x="38" y="28" width="4" height="22" fill="var(--brass)"/>
+            <rect x="46" y="20" width="4" height="30" fill="var(--burgundy-deep)"/>
+          </svg>
+        </div>
+        <span class="project-status status-planned" data-i18n="projects.status_planned">planeado</span>
+        <h3 data-i18n="projects.p2.title">Visualizador y editor de música</h3>
+        <p data-i18n="projects.p2.desc">Una aplicación para visualizar audio en tiempo real y experimentar con edición de sonido. Proyecto personal para aprender procesamiento de audio desde cero.</p>
+        <ul class="tech-tags">
+          <li>C#</li>
+          <li data-i18n="projects.p2.tag1">Procesamiento de audio</li>
+        </ul>
+      </article>
+
+      <article class="project-card project-card-ghost">
+        <div class="project-icon project-icon-ghost" aria-hidden="true">
+          <svg viewBox="0 0 64 64" fill="none" xmlns="http://www.w3.org/2000/svg">
+            <rect x="4" y="4" width="56" height="56" rx="12" stroke="var(--ink)" stroke-width="2" stroke-dasharray="5 5"/>
+            <line x1="32" y1="20" x2="32" y2="44" stroke="var(--ink)" stroke-width="2"/>
+            <line x1="20" y1="32" x2="44" y2="32" stroke="var(--ink)" stroke-width="2"/>
+          </svg>
+        </div>
+        <h3 data-i18n="projects.ghost.title">Tu próximo proyecto</h3>
+        <p data-i18n="projects.ghost.desc">Este espacio está reservado para lo siguiente que construya. Vuelve pronto.</p>
+      </article>
+
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section id="contact" class="section contact">
+    <p class="eyebrow mono" data-i18n="contact.eyebrow">// contacto</p>
+    <h2 class="section-title" data-i18n="contact.title">Hablemos</h2>
+    <p class="section-lead" data-i18n="contact.lead">¿Tienes una oportunidad, un proyecto o simplemente quieres saludar? Escríbeme.</p>
+
+    <div class="contact-links">
+      <a class="contact-link" href="mailto:apredondo909@gmail.com">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.5" y="4.5" width="19" height="15" rx="2" stroke="currentColor" stroke-width="1.6"/><path d="M3 6.5L12 13L21 6.5" stroke="currentColor" stroke-width="1.6"/></svg>
+        <span>apredondo909@gmail.com</span>
+      </a>
+      <a class="contact-link" href="https://www.linkedin.com/in/alejandroprovencioredondo/" target="_blank" rel="noopener">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><rect x="2.5" y="2.5" width="19" height="19" rx="3" stroke="currentColor" stroke-width="1.6"/><circle cx="7.8" cy="8" r="1.2" fill="currentColor"/><path d="M7.8 11V17" stroke="currentColor" stroke-width="1.6"/><path d="M12 17V13.2C12 11.8 13 11 14.2 11C15.4 11 16.2 11.8 16.2 13.2V17" stroke="currentColor" stroke-width="1.6"/></svg>
+        <span>/alejandroprovencioredondo</span>
+      </a>
+      <span class="contact-link contact-link-static">
+        <svg viewBox="0 0 24 24" fill="none" xmlns="http://www.w3.org/2000/svg"><path d="M12 21C12 21 19 14.5 19 9.5C19 5.8 15.9 3 12 3C8.1 3 5 5.8 5 9.5C5 14.5 12 21 12 21Z" stroke="currentColor" stroke-width="1.6"/><circle cx="12" cy="9.5" r="2.5" stroke="currentColor" stroke-width="1.6"/></svg>
+        <span data-i18n="contact.location">Granada, España</span>
+      </span>
+    </div>
+  </section>
+
+</main>
+
+<footer class="site-footer">
+  <p class="mono">© <span id="year"></span> Alejandro Provencio — <span data-i18n="footer.line">construido con HTML, CSS y JS</span></p>
+</footer>
+
+<script src="script.js"></script>
+</body>
+</html>
