@@ -269,6 +269,20 @@ img, svg { display: block; max-width: 100%; }
 .btn-ghost { border: 1.5px solid var(--ink); color: var(--ink); }
 .btn-ghost:hover { background: var(--ink); color: var(--beige-bg); transform: translateY(-2px); }
 
+.btn-cv {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 13px 4px;
+  color: var(--ink-soft);
+  font-size: 0.95rem;
+  font-weight: 500;
+  border-bottom: 1.5px solid transparent;
+  transition: color 0.18s ease, border-color 0.18s ease;
+}
+.btn-cv svg { flex-shrink: 0; }
+.btn-cv:hover { color: var(--ink); border-color: var(--ink-soft); }
+
 /* status panel — the signature element */
 .status-panel {
   background: var(--red-panel);
@@ -677,7 +691,8 @@ body[data-contrast="high"] .contrast-toggle {
 
 body[data-contrast="high"] .main-nav a,
 body[data-contrast="high"] .contact-link,
-body[data-contrast="high"] .hero-actions .btn-ghost {
+body[data-contrast="high"] .hero-actions .btn-ghost,
+body[data-contrast="high"] .btn-cv {
   text-decoration: underline;
   text-underline-offset: 3px;
 }
