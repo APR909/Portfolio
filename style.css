@@ -2,16 +2,17 @@
    DESIGN TOKENS
    ========================================================= */
 :root {
-  --burgundy-deep:  #5C1A2B;
-  --burgundy-mid:   #7C2B40;
-  --burgundy-soft:  #9A4357;
-  --beige-bg:       #F2E8D9;
-  --beige-card:     #E7D9C2;
-  --beige-card-2:   #EDE1CC;
-  --ink:            #2B1B1E;
-  --ink-soft:       #5A4A48;
-  --brass:          #B98C4F;
-  --status-green:   #6E8F6B;
+  --burgundy-deep:  #E4283C;  /* primary red — accents, buttons, brand mark */
+  --burgundy-mid:   #FF4D67;  /* bright red — hovers, small mono labels */
+  --burgundy-soft:  #FF8FA3;  /* soft red — reserved */
+  --red-panel:      #240A10;  /* deep red-black — status panel fill */
+  --beige-bg:       #0B0B0D;  /* page background — near black */
+  --beige-card:     #17171B;  /* card background */
+  --beige-card-2:   #1D1D22;  /* secondary card tone */
+  --ink:            #F3EFEA;  /* primary text — warm off-white */
+  --ink-soft:       #A9A29D;  /* secondary text — muted warm grey */
+  --brass:          #C79A52;  /* tertiary gold accent */
+  --status-green:   #7CA878;  /* status / online indicator */
 
   --font-display: "Fraunces", serif;
   --font-body: "Work Sans", sans-serif;
@@ -91,9 +92,9 @@ img, svg { display: block; max-width: 100%; }
   position: sticky;
   top: 0;
   z-index: 50;
-  background: rgba(242, 232, 217, 0.88);
+  background: rgba(11, 11, 13, 0.88);
   backdrop-filter: blur(8px);
-  border-bottom: 1px solid rgba(43, 27, 30, 0.08);
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
 }
 
 .nav-wrap {
@@ -114,7 +115,7 @@ img, svg { display: block; max-width: 100%; }
   height: 40px;
   border-radius: 50%;
   background: var(--burgundy-deep);
-  color: var(--beige-bg);
+  color: #fff;
   font-family: var(--font-display);
   font-weight: 600;
   font-size: 1rem;
@@ -146,7 +147,7 @@ img, svg { display: block; max-width: 100%; }
   align-items: center;
   gap: 6px;
   background: var(--beige-card);
-  border: 1px solid rgba(43, 27, 30, 0.12);
+  border: 1px solid rgba(255, 255, 255, 0.12);
   border-radius: 999px;
   padding: 6px 12px;
   cursor: pointer;
@@ -155,8 +156,25 @@ img, svg { display: block; max-width: 100%; }
   color: var(--ink-soft);
 }
 
+.contrast-toggle {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 34px;
+  height: 34px;
+  background: var(--beige-card);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 50%;
+  cursor: pointer;
+  color: var(--ink-soft);
+  transition: color 0.2s ease, border-color 0.2s ease;
+}
+
+.contrast-toggle:hover { color: var(--ink); border-color: rgba(255,255,255,0.28); }
+.contrast-toggle.active { color: var(--burgundy-deep); border-color: var(--burgundy-deep); }
+
 .lang-opt { padding: 2px 4px; border-radius: 6px; transition: background 0.2s, color 0.2s; }
-.lang-opt.active { background: var(--burgundy-deep); color: var(--beige-bg); }
+.lang-opt.active { background: var(--burgundy-deep); color: #fff; }
 .lang-sep { opacity: 0.4; }
 
 .nav-burger {
@@ -181,9 +199,38 @@ img, svg { display: block; max-width: 100%; }
 
 .hero-grid {
   display: grid;
-  grid-template-columns: 1.2fr 0.9fr;
+  grid-template-columns: 1.1fr 0.9fr;
   gap: 56px;
-  align-items: center;
+  align-items: stretch;
+}
+
+.hero-copy { display: flex; flex-direction: column; }
+
+.hero-copy .status-panel { margin-top: 40px; }
+
+.hero-visual {
+  position: relative;
+  min-height: 420px;
+  border-radius: var(--radius-lg);
+  overflow: hidden;
+  background: var(--beige-bg);
+}
+
+.hero-portrait {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: center 20%;
+  display: block;
+}
+
+.photo-credit {
+  position: absolute;
+  right: 16px;
+  bottom: 14px;
+  font-size: 0.65rem;
+  letter-spacing: 0.03em;
+  color: rgba(255, 255, 255, 0.55);
 }
 
 .eyebrow.mono { font-size: 0.85rem; }
@@ -216,7 +263,7 @@ img, svg { display: block; max-width: 100%; }
   transition: transform 0.18s ease, background 0.18s ease, color 0.18s ease;
 }
 
-.btn-primary { background: var(--burgundy-deep); color: var(--beige-bg); }
+.btn-primary { background: var(--burgundy-deep); color: #fff; }
 .btn-primary:hover { background: var(--burgundy-mid); transform: translateY(-2px); }
 
 .btn-ghost { border: 1.5px solid var(--ink); color: var(--ink); }
@@ -224,8 +271,9 @@ img, svg { display: block; max-width: 100%; }
 
 /* status panel — the signature element */
 .status-panel {
-  background: var(--burgundy-deep);
-  color: var(--beige-bg);
+  background: var(--red-panel);
+  color: var(--ink);
+  border: 1px solid rgba(228, 40, 60, 0.28);
   border-radius: var(--radius-lg);
   padding: 32px;
   position: relative;
@@ -252,14 +300,14 @@ img, svg { display: block; max-width: 100%; }
   height: 9px;
   border-radius: 50%;
   background: var(--status-green);
-  box-shadow: 0 0 0 0 rgba(110, 143, 107, 0.6);
+  box-shadow: 0 0 0 0 rgba(124, 168, 120, 0.6);
   animation: pulse-dot 2.4s infinite;
 }
 
 @keyframes pulse-dot {
-  0%   { box-shadow: 0 0 0 0 rgba(110, 143, 107, 0.55); }
-  70%  { box-shadow: 0 0 0 7px rgba(110, 143, 107, 0); }
-  100% { box-shadow: 0 0 0 0 rgba(110, 143, 107, 0); }
+  0%   { box-shadow: 0 0 0 0 rgba(124, 168, 120, 0.55); }
+  70%  { box-shadow: 0 0 0 7px rgba(124, 168, 120, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(124, 168, 120, 0); }
 }
 
 .status-label { font-size: 0.78rem; text-transform: lowercase; opacity: 0.9; }
@@ -293,7 +341,7 @@ img, svg { display: block; max-width: 100%; }
   display: grid;
   gap: 16px;
   margin: 0;
-  border-top: 1px solid rgba(242,232,217,0.18);
+  border-top: 1px solid rgba(255,255,255,0.18);
   padding-top: 22px;
 }
 
@@ -339,7 +387,7 @@ img, svg { display: block; max-width: 100%; }
 
 .chip-list li {
   background: var(--beige-bg);
-  border: 1px solid rgba(43,27,30,0.1);
+  border: 1px solid rgba(255,255,255,0.12);
   border-radius: 999px;
   padding: 6px 13px;
   font-size: 0.82rem;
@@ -366,7 +414,7 @@ img, svg { display: block; max-width: 100%; }
   list-style: none;
   margin: 0;
   padding: 0;
-  border-left: 2px solid rgba(43,27,30,0.12);
+  border-left: 2px solid rgba(255,255,255,0.15);
 }
 
 .timeline-item {
@@ -429,7 +477,7 @@ img, svg { display: block; max-width: 100%; }
 
 .project-card-ghost {
   background: transparent;
-  border: 1.5px dashed rgba(43,27,30,0.25);
+  border: 1.5px dashed rgba(255,255,255,0.25);
   justify-content: center;
   align-items: flex-start;
 }
@@ -449,8 +497,8 @@ img, svg { display: block; max-width: 100%; }
   margin-bottom: 14px;
 }
 
-.status-progress { background: rgba(110,143,107,0.18); color: var(--status-green); }
-.status-planned { background: rgba(185,140,79,0.2); color: var(--brass); }
+.status-progress { background: rgba(124,168,120,0.18); color: var(--status-green); }
+.status-planned { background: rgba(199,154,82,0.2); color: var(--brass); }
 
 .project-card h3 {
   font-family: var(--font-display);
@@ -507,8 +555,8 @@ img, svg { display: block; max-width: 100%; }
 
 .contact-link svg { width: 18px; height: 18px; color: var(--burgundy-deep); }
 
-a.contact-link:hover { background: var(--burgundy-deep); color: var(--beige-bg); transform: translateY(-2px); }
-a.contact-link:hover svg { color: var(--beige-bg); }
+a.contact-link:hover { background: var(--burgundy-deep); color: #fff; transform: translateY(-2px); }
+a.contact-link:hover svg { color: #fff; }
 
 .contact-link-static { cursor: default; }
 
@@ -552,17 +600,89 @@ a.contact-link:hover svg { color: var(--beige-bg); }
     flex-direction: column;
     gap: 0;
     padding: 8px 32px 18px;
-    border-bottom: 1px solid rgba(43,27,30,0.08);
+    border-bottom: 1px solid rgba(255,255,255,0.08);
     transform: translateY(-12px);
     opacity: 0;
     pointer-events: none;
     transition: opacity 0.2s ease, transform 0.2s ease;
   }
   .main-nav.is-open { opacity: 1; transform: translateY(0); pointer-events: auto; }
-  .main-nav a { padding: 12px 0; border-bottom: 1px solid rgba(43,27,30,0.06); }
+  .main-nav a { padding: 12px 0; border-bottom: 1px solid rgba(255,255,255,0.08); }
   .nav-burger { display: flex; }
   .skills-grid { grid-template-columns: 1fr; }
   .section { padding: 72px 22px; }
   .nav-wrap { padding: 16px 22px; }
   .hero { padding: 56px 22px 72px; }
+}
+
+/* =========================================================
+   HIGH-CONTRAST / ACCESSIBLE MODE
+   Toggled via #contrast-toggle, persisted in localStorage.
+   Body/heading text avoids red entirely (a single red can't hit
+   AAA contrast against both black and white at once) — red is
+   kept only on fills/borders/icons paired with white text, which
+   already clears 4.5:1. Everything else becomes pure black/white.
+   ========================================================= */
+body[data-contrast="high"] {
+  --beige-bg:      #000000;
+  --beige-card:    #0D0D0D;
+  --beige-card-2:  #141414;
+  --red-panel:     #000000;
+  --ink:           #FFFFFF;
+  --ink-soft:      #EDEDED;
+  --brass:         #FFD166;
+  --status-green:  #4ADE80;
+}
+
+body[data-contrast="high"] .eyebrow,
+body[data-contrast="high"] .hero-name,
+body[data-contrast="high"] .skill-group h3,
+body[data-contrast="high"] .journey-col-title,
+body[data-contrast="high"] .certs-title,
+body[data-contrast="high"] .timeline-date {
+  color: #FFFFFF;
+}
+
+body[data-contrast="high"] .status-panel { border-color: rgba(255,255,255,0.5); }
+body[data-contrast="high"] .status-meta { border-top-color: rgba(255,255,255,0.3); }
+
+body[data-contrast="high"] .btn-primary,
+body[data-contrast="high"] .brand-mark,
+body[data-contrast="high"] .lang-opt.active {
+  background: #FFFFFF;
+  color: #000000;
+}
+
+body[data-contrast="high"] a.contact-link:hover {
+  background: #FFFFFF;
+  color: #000000;
+}
+body[data-contrast="high"] a.contact-link:hover svg { color: #000000; }
+
+body[data-contrast="high"] .contrast-toggle.active {
+  background: #FFFFFF;
+  color: #000000;
+  border-color: #FFFFFF;
+}
+
+body[data-contrast="high"] .chip-list li,
+body[data-contrast="high"] .tech-tags li,
+body[data-contrast="high"] .timeline,
+body[data-contrast="high"] .project-card-ghost,
+body[data-contrast="high"] .site-header,
+body[data-contrast="high"] .lang-toggle,
+body[data-contrast="high"] .contrast-toggle {
+  border-color: rgba(255,255,255,0.4);
+}
+
+body[data-contrast="high"] .main-nav a,
+body[data-contrast="high"] .contact-link,
+body[data-contrast="high"] .hero-actions .btn-ghost {
+  text-decoration: underline;
+  text-underline-offset: 3px;
+}
+
+body[data-contrast="high"] :focus-visible {
+  outline: 3px solid #FFFFFF;
+  outline-offset: 3px;
 }

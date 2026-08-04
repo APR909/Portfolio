@@ -216,9 +216,42 @@ const langToggle = document.getElementById("lang-toggle");
 langToggle.addEventListener("click", () => {
   const next = document.body.dataset.lang === "es" ? "en" : "es";
   applyLang(next);
+  applyContrastLabel();
 });
 
 applyLang(document.body.dataset.lang || "es");
+
+// =========================================================
+// HIGH-CONTRAST MODE
+// =========================================================
+const contrastToggle = document.getElementById("contrast-toggle");
+const contrastLabels = {
+  es: { on: "Desactivar alto contraste", off: "Activar alto contraste" },
+  en: { on: "Turn off high contrast", off: "Turn on high contrast" }
+};
+
+function applyContrastLabel() {
+  const lang = document.body.dataset.lang || "es";
+  const isHigh = document.body.dataset.contrast === "high";
+  contrastToggle.setAttribute("aria-label", isHigh ? contrastLabels[lang].on : contrastLabels[lang].off);
+  contrastToggle.setAttribute("aria-pressed", isHigh ? "true" : "false");
+  contrastToggle.classList.toggle("active", isHigh);
+}
+
+function setContrast(mode) {
+  document.body.dataset.contrast = mode;
+  applyContrastLabel();
+  try { localStorage.setItem("contrast", mode); } catch (e) {}
+}
+
+contrastToggle.addEventListener("click", () => {
+  const next = document.body.dataset.contrast === "high" ? "normal" : "high";
+  setContrast(next);
+});
+
+let savedContrast = "normal";
+try { savedContrast = localStorage.getItem("contrast") || "normal"; } catch (e) {}
+setContrast(savedContrast);
 
 // =========================================================
 // MOBILE NAV

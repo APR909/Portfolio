@@ -5,6 +5,31 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <title>Alejandro Provencio — Redes & Desarrollo</title>
 <meta name="description" content="Portfolio de Alejandro Provencio. Técnico de redes y sistemas, desarrollador de videojuegos.">
+
+<!-- Favicon -->
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon-32.png" sizes="32x32" type="image/png">
+<link rel="icon" href="assets/favicon-16.png" sizes="16x16" type="image/png">
+<link rel="shortcut icon" href="assets/favicon.ico">
+<link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
+<meta name="theme-color" content="#0B0B0D">
+
+<!-- Open Graph -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://apr909.github.io/Portfolio/">
+<meta property="og:title" content="Alejandro Provencio — Redes & Desarrollo">
+<meta property="og:description" content="Técnico de sistemas y redes con formación en desarrollo de videojuegos 3D. Entre routers, redes de fibra y motores de videojuego.">
+<meta property="og:image" content="https://apr909.github.io/Portfolio/assets/og-image.png">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:locale" content="es_ES">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary_large_image">
+<meta name="twitter:title" content="Alejandro Provencio — Redes & Desarrollo">
+<meta name="twitter:description" content="Técnico de sistemas y redes con formación en desarrollo de videojuegos 3D. Entre routers, redes de fibra y motores de videojuego.">
+<meta name="twitter:image" content="https://apr909.github.io/Portfolio/assets/og-image.png">
+
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Fraunces:opsz,wght@9..144,300..900&family=Work+Sans:wght@400;500;600;700&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
@@ -27,6 +52,12 @@
     </nav>
 
     <div class="header-actions">
+      <button id="contrast-toggle" class="contrast-toggle" type="button" aria-pressed="false" aria-label="Activar alto contraste">
+        <svg viewBox="0 0 24 24" width="18" height="18" aria-hidden="true">
+          <circle cx="12" cy="12" r="9" fill="none" stroke="currentColor" stroke-width="1.6"/>
+          <path d="M12 3a9 9 0 0 1 0 18z" fill="currentColor"/>
+        </svg>
+      </button>
       <button id="lang-toggle" class="lang-toggle" aria-label="Cambiar idioma / Switch language">
         <span class="lang-opt" data-lang-opt="es">ES</span>
         <span class="lang-sep">/</span>
@@ -52,35 +83,40 @@
           <a href="#projects" class="btn btn-primary" data-i18n="hero.cta_projects">Ver proyectos</a>
           <a href="#contact" class="btn btn-ghost" data-i18n="hero.cta_contact">Hablemos</a>
         </div>
+
+        <div class="status-panel">
+          <div class="status-row">
+            <span class="status-dot" aria-hidden="true"></span>
+            <span class="mono status-label" data-i18n="hero.status">disponible para nuevas oportunidades</span>
+          </div>
+
+          <div class="signal" aria-hidden="true">
+            <span class="bar b1"></span>
+            <span class="bar b2"></span>
+            <span class="bar b3"></span>
+            <span class="bar b4"></span>
+          </div>
+
+          <dl class="status-meta">
+            <div>
+              <dt data-i18n="hero.meta_location_label">ubicación</dt>
+              <dd data-i18n="hero.meta_location_value">Granada, España</dd>
+            </div>
+            <div>
+              <dt data-i18n="hero.meta_uptime_label">en activo desde</dt>
+              <dd>2021</dd>
+            </div>
+            <div>
+              <dt data-i18n="hero.meta_lang_label">idiomas</dt>
+              <dd data-i18n="hero.meta_lang_value">Español (nativo) · Inglés (C1)</dd>
+            </div>
+          </dl>
+        </div>
       </div>
 
-      <div class="status-panel">
-        <div class="status-row">
-          <span class="status-dot" aria-hidden="true"></span>
-          <span class="mono status-label" data-i18n="hero.status">disponible para nuevas oportunidades</span>
-        </div>
-
-        <div class="signal" aria-hidden="true">
-          <span class="bar b1"></span>
-          <span class="bar b2"></span>
-          <span class="bar b3"></span>
-          <span class="bar b4"></span>
-        </div>
-
-        <dl class="status-meta">
-          <div>
-            <dt data-i18n="hero.meta_location_label">ubicación</dt>
-            <dd data-i18n="hero.meta_location_value">Granada, España</dd>
-          </div>
-          <div>
-            <dt data-i18n="hero.meta_uptime_label">en activo desde</dt>
-            <dd>2021</dd>
-          </div>
-          <div>
-            <dt data-i18n="hero.meta_lang_label">idiomas</dt>
-            <dd data-i18n="hero.meta_lang_value">Español (nativo) · Inglés (C1)</dd>
-          </div>
-        </dl>
+      <div class="hero-visual">
+        <img class="hero-portrait" src="assets/portrait.png" width="573" height="717" alt="Retrato de Alejandro Provencio">
+        <span class="photo-credit mono">Foto: Salvador Ruiz</span>
       </div>
     </div>
   </section>
