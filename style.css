@@ -522,6 +522,19 @@ img, svg { display: block; max-width: 100%; }
   color: var(--ink-soft);
 }
 
+.project-link {
+  display: inline-flex;
+  align-items: center;
+  margin-top: 18px;
+  color: var(--burgundy-mid);
+  font-size: 0.86rem;
+  font-weight: 600;
+  width: fit-content;
+  border-bottom: 1px solid transparent;
+  transition: color 0.18s ease, border-color 0.18s ease;
+}
+.project-link:hover { color: var(--ink); border-color: var(--ink-soft); }
+
 /* =========================================================
    CONTACT
    ========================================================= */

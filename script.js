@@ -80,6 +80,7 @@ const translations = {
     "projects.p1.desc": "Un juego de billar para echar partidas en el tiempo libre, con salas multijugador y una tabla de puntuaciones para llevar la cuenta de quién manda.",
     "projects.p1.tag1": "Física 2D",
     "projects.p1.tag2": "Marcador online",
+    "projects.p1.link": "Probar prototipo →",
 
     "projects.p2.title": "Visualizador y editor de música",
     "projects.p2.desc": "Una aplicación para visualizar audio en tiempo real y experimentar con edición de sonido. Proyecto personal para aprender procesamiento de audio desde cero.",
@@ -174,6 +175,7 @@ const translations = {
     "projects.p1.desc": "A pool game for spare-time matches, with multiplayer rooms and a scoreboard to keep track of who's winning.",
     "projects.p1.tag1": "2D physics",
     "projects.p1.tag2": "Online scoreboard",
+    "projects.p1.link": "Try the prototype →",
 
     "projects.p2.title": "Music visualizer & editor",
     "projects.p2.desc": "An app to visualize audio in real time and experiment with sound editing. A personal project to learn audio processing from scratch.",
