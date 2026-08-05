@@ -306,7 +306,7 @@ img, svg { display: block; max-width: 100%; }
   display: flex;
   align-items: center;
   gap: 10px;
-  margin-bottom: 22px;
+  margin-bottom: 46px;
 }
 
 .status-dot {
@@ -325,31 +325,6 @@ img, svg { display: block; max-width: 100%; }
 }
 
 .status-label { font-size: 0.78rem; text-transform: lowercase; opacity: 0.9; }
-
-.signal {
-  display: flex;
-  align-items: flex-end;
-  gap: 5px;
-  height: 34px;
-  margin-bottom: 28px;
-}
-
-.signal .bar {
-  width: 8px;
-  background: var(--brass);
-  border-radius: 3px;
-  opacity: 0.45;
-  animation: signal-rise 2.6s ease-in-out infinite;
-}
-.signal .b1 { height: 30%; animation-delay: 0s; }
-.signal .b2 { height: 55%; animation-delay: 0.18s; }
-.signal .b3 { height: 80%; animation-delay: 0.36s; }
-.signal .b4 { height: 100%; animation-delay: 0.54s; }
-
-@keyframes signal-rise {
-  0%, 100% { opacity: 0.45; }
-  50% { opacity: 1; }
-}
 
 .status-meta {
   display: grid;
