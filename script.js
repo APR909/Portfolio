@@ -86,8 +86,9 @@ const translations = {
     "projects.p2.desc": "Una aplicación para visualizar audio en tiempo real y experimentar con edición de sonido. Proyecto personal para aprender procesamiento de audio desde cero.",
     "projects.p2.tag1": "Procesamiento de audio",
 
-    "projects.ghost.title": "Tu próximo proyecto",
-    "projects.ghost.desc": "Este espacio está reservado para lo siguiente que construya. Vuelve pronto.",
+    "projects.p3.title": "Prop Hunt",
+    "projects.p3.desc": "Un escondite visto desde arriba: te disfrazas de un objeto de la sala para camuflarte entre los muebles reales, mientras alguien más intenta encontrarte.",
+    "projects.p3.tag1": "Vista cenital",
 
     "contact.eyebrow": "// contacto",
     "contact.title": "Hablemos",
@@ -181,8 +182,9 @@ const translations = {
     "projects.p2.desc": "An app to visualize audio in real time and experiment with sound editing. A personal project to learn audio processing from scratch.",
     "projects.p2.tag1": "Audio processing",
 
-    "projects.ghost.title": "Your next project",
-    "projects.ghost.desc": "This space is reserved for whatever I build next. Check back soon.",
+    "projects.p3.title": "Prop Hunt",
+    "projects.p3.desc": "A top-down hide-and-seek: disguise yourself as an object in the room to blend in with the real furniture, while someone else tries to find you.",
+    "projects.p3.tag1": "Top-down view",
 
     "contact.eyebrow": "// contact",
     "contact.title": "Let's talk",
