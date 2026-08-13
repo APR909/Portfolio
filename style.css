@@ -39,6 +39,35 @@ body {
   font-size: 16px;
   line-height: 1.6;
   -webkit-font-smoothing: antialiased;
+  position: relative;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  z-index: -1;
+  pointer-events: none;
+  background-color: var(--beige-bg);
+  background-image:
+    radial-gradient(ellipse 60% 30% at 20% 0%, rgba(228,40,60,0.07), transparent 65%),
+    radial-gradient(ellipse 50% 26% at 75% 15%, rgba(255,77,103,0.05), transparent 65%),
+    radial-gradient(ellipse 55% 30% at 40% 45%, rgba(36,10,16,0.30), transparent 70%),
+    radial-gradient(ellipse 65% 32% at 85% 60%, rgba(228,40,60,0.06), transparent 65%),
+    radial-gradient(ellipse 55% 28% at 15% 85%, rgba(255,77,103,0.045), transparent 65%),
+    radial-gradient(ellipse 60% 30% at 60% 110%, rgba(228,40,60,0.065), transparent 65%);
+  background-size: 100% 220%;
+  background-repeat: repeat-y;
+  animation: lavaFlow 34s linear infinite;
+}
+
+@keyframes lavaFlow {
+  from { background-position: 0 -220%; }
+  to   { background-position: 0 0%; }
+}
+
+@media (prefers-reduced-motion: reduce) {
+  body::before { animation: none; }
 }
 
 a { color: inherit; text-decoration: none; }
