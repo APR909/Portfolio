@@ -76,7 +76,7 @@ const translations = {
     "projects.status_progress": "en desarrollo",
     "projects.status_planned": "planeado",
 
-    "projects.p1.title": "Billar online",
+    "projects.p1.title": "Infernal 8 Ball",
     "projects.p1.desc": "Un juego de billar para echar partidas en el tiempo libre, con salas multijugador y una tabla de puntuaciones para llevar la cuenta de quién manda.",
     "projects.p1.tag1": "Física 2D",
     "projects.p1.tag2": "Marcador online",
@@ -176,7 +176,7 @@ const translations = {
     "projects.status_progress": "in progress",
     "projects.status_planned": "planned",
 
-    "projects.p1.title": "Online pool",
+    "projects.p1.title": "Infernal 8 Ball",
     "projects.p1.desc": "A pool game for spare-time matches, with multiplayer rooms and a scoreboard to keep track of who's winning.",
     "projects.p1.tag1": "2D physics",
     "projects.p1.tag2": "Online scoreboard",
