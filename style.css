@@ -631,6 +631,13 @@ a.contact-link:hover svg { color: #fff; }
 
 .contact-link-static { cursor: default; }
 
+.contact-link-whatsapp {
+  background: var(--burgundy-deep);
+  color: #fff;
+}
+.contact-link-whatsapp svg { color: #fff; }
+.contact-link-whatsapp:hover { background: var(--burgundy-mid); }
+
 /* =========================================================
    FOOTER
    ========================================================= */

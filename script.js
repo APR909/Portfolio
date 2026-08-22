@@ -89,10 +89,12 @@ const translations = {
     "projects.p3.title": "Prop Hunt",
     "projects.p3.desc": "Un escondite visto desde arriba: te disfrazas de un objeto de la sala para camuflarte entre los muebles reales, mientras alguien más intenta encontrarte.",
     "projects.p3.tag1": "Vista cenital",
+    "projects.p3.link": "Probar prototipo →",
 
     "projects.p4.title": "Hell's Hunt",
     "projects.p4.desc": "Un Duck Hunt infernal: demonios voladores que hay que cazar antes de que escapen, con rondas cada vez más difíciles y munición limitada.",
     "projects.p4.tag1": "Web Audio",
+    "projects.p4.link": "Probar prototipo →",
 
     "contact.eyebrow": "// contacto",
     "contact.title": "Hablemos",
@@ -189,10 +191,12 @@ const translations = {
     "projects.p3.title": "Prop Hunt",
     "projects.p3.desc": "A top-down hide-and-seek: disguise yourself as an object in the room to blend in with the real furniture, while someone else tries to find you.",
     "projects.p3.tag1": "Top-down view",
+    "projects.p3.link": "Try the prototype →",
 
     "projects.p4.title": "Hell's Hunt",
     "projects.p4.desc": "An infernal Duck Hunt: shoot down flying demons before they escape, with harder rounds and limited ammo.",
     "projects.p4.tag1": "Web Audio",
+    "projects.p4.link": "Try the prototype →",
 
     "contact.eyebrow": "// contact",
     "contact.title": "Let's talk",
